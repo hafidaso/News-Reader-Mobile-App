@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "News Reader",
+    "slug": "news-reader-app",
+    "version": "1.0.0",
+    "description": "A modern, feature-rich mobile news reader app by Hafida Belayd",
+    "orientation": "portrait",
+    "jsEngine": "hermes",
+    "scheme": "newsreader",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.newsreader.app",
+      "associatedDomains": [
+        "applinks:newsreader.app"
+      ]
+    },
+    "android": {
+      "package": "com.newsreader.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [],
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "https",
+              "host": "*.newsreader.app",
+              "pathPrefix": "/"
+            },
+            {
+              "scheme": "newsreader"
+            }
+          ],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        }
+      ]
+    },
+    "notification": {
+      "icon": "./assets/notification-icon.png",
+      "color": "#3B82F6",
+      "androidMode": "default",
+      "androidCollapsedTitle": "📰 News Reader"
+    }
+  }
+}
+
