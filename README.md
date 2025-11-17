@@ -30,6 +30,7 @@ A modern, feature-rich mobile news reader app built with React Native and Expo. 
 - **📡 Network Monitoring** - Real-time connectivity status with visual indicators
 - **🔔 Push Notifications** - Get breaking news alerts with customizable preferences
 - **🌙 Dark Mode** - Eye-friendly dark theme with automatic persistence
+- **🤖 AI-Powered Summaries** - Generate concise article summaries using OpenRouter AI models
 - **⚙️ Settings Screen** - Centralized control for all app preferences
 - **⚡ Fast Performance** - Optimized caching delivers 10x faster load times
 - **🎨 Modern UI/UX** - Beautiful, intuitive design with smooth animations
@@ -111,13 +112,20 @@ NEWS_API_KEY=your_api_key_here
 NEWS_API_BASE_URL=https://newsapi.org/
 ```
 
-### 3. Install Dependencies
+### 3. (Optional) Get Your OpenRouter API Key for AI Summaries
+
+1. Visit [OpenRouter.ai](https://openrouter.ai/)
+2. Sign up for a free account
+3. Navigate to your account settings or dashboard to find your API key
+4. Copy the API key (you'll configure it in the app later)
+
+### 4. Install Dependencies
 
 ```bash
 npm install
 ```
 
-### 4. Start the Development Server
+### 5. Start the Development Server
 
 ```bash
 # Start Expo development server
@@ -128,10 +136,20 @@ npm run ios      # iOS Simulator
 npm run android  # Android Emulator
 ```
 
-### 5. Run on Device
+### 6. Run on Device
 
 - **iOS**: Press `i` in terminal or scan QR code with Camera app
 - **Android**: Press `a` in terminal or scan QR code with Expo Go app
+
+### 7. (Optional) Configure AI Summaries in the App
+
+1. From the app's home screen, go to the main **Settings** page
+2. Tap on **"Summary Settings"**
+3. Paste your OpenRouter API key into the **"OpenRouter API Key"** input field
+4. Enable the **"Enable AI Summaries"** switch
+5. (Optional) Choose your preferred AI model and adjust other settings
+6. Tap the **"Save Settings"** button
+7. Test the connection by tapping the **"Test Connection"** button
 
 ---
 
@@ -159,6 +177,7 @@ app-news-mobile/
 │   │   ├── BookmarksScreen.tsx     # Saved articles list
 │   │   ├── ArticleDetailScreen.tsx # In-app article reader with WebView
 │   │   ├── NotificationSettingsScreen.tsx  # Push notification preferences
+│   │   ├── SummarySettingsScreen.tsx       # AI summary configuration
 │   │   └── SettingsScreen.tsx      # App settings and preferences
 │   │
 │   ├── services/                    # Business logic & data services
@@ -167,7 +186,8 @@ app-news-mobile/
 │   │   ├── cacheStorage.ts         # Article caching system
 │   │   ├── navigationHistory.ts    # Article navigation tracking
 │   │   ├── shareService.ts         # Native share functionality
-│   │   └── notificationService.ts  # Push notification management
+│   │   ├── notificationService.ts  # Push notification management
+│   │   └── summaryService.ts       # AI-powered article summarization
 │   │
 │   ├── contexts/                    # React Context providers
 │   │   └── ThemeContext.tsx        # Dark/Light mode management
@@ -289,6 +309,29 @@ Centralized app control:
 - **About** - App info, version, links
 - **Advanced** - Reset to defaults
 
+### 🤖 AI-Powered Summaries
+Get concise article summaries powered by AI:
+- Uses OpenRouter API for access to multiple AI models
+- Supports models like GPT-3.5, GPT-4, Claude, and more
+- Summarizes article content in seconds
+- Configurable summary length and style
+- Test connection to verify API key
+- Secure API key storage
+
+**How it works:**
+1. Navigate to **Settings** > **Summary Settings**
+2. Enter your OpenRouter API key (get one free at [openrouter.ai](https://openrouter.ai/))
+3. Enable **"Enable AI Summaries"**
+4. Choose your preferred AI model
+5. Test the connection to verify setup
+6. Summaries will be available in article detail views
+
+**Supported Models:**
+- GPT-3.5 Turbo (Fast and efficient)
+- GPT-4 (Most capable)
+- Claude (Anthropic's AI)
+- And many more through OpenRouter
+
 ---
 
 ## 🛠️ Technologies Used
@@ -316,6 +359,7 @@ Centralized app control:
 - **expo-notifications** `0.30.3` - Push notifications
 - **expo-device** `7.0.2` - Device information
 - **React Native Share API** - Native sharing (built-in)
+- **OpenRouter** - AI-powered article summarization
 
 ---
 
@@ -586,6 +630,7 @@ Hafida Belayd is a Data Scientist and AI Specialist based in Rabat, Morocco, wit
 ## 🙏 Acknowledgments
 
 - **[NewsAPI](https://newsapi.org/)** - For providing the news data API
+- **[OpenRouter](https://openrouter.ai/)** - For providing access to multiple AI models for article summarization
 - **[Expo Team](https://expo.dev/)** - For the amazing development platform
 - **[React Native Community](https://reactnative.dev/)** - For the excellent framework and ecosystem
 - **[Ionicons](https://ionic.io/ionicons)** - For the beautiful icon library
