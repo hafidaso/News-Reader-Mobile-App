@@ -36,7 +36,31 @@ A modern, feature-rich mobile news reader app built with React Native and Expo. 
 
 ---
 
-## 📸 Screenshots
+## 📸 Screenshots & Demo
+
+### 🎥 App Demo
+
+<div align="center">
+  <img src="./assets/screenshots/demo.gif" alt="News Reader App Demo" width="300"/>
+</div>
+
+*Watch the News Reader app in action!*
+
+> 📹 **Full video**: [video-app.mov](./assets/screenshots/video-app.mov)
+
+---
+
+### Home Screen
+
+<div align="center">
+  <img src="./assets/screenshots/home-screen.png" alt="News Reader Home Screen" width="300"/>
+</div>
+
+*Browse the latest headlines, search for topics, and save your favorite articles*
+
+---
+
+### UI Layout Reference
 
 ```
 ┌─────────────────────────────┐     ┌─────────────────────────────┐
@@ -84,7 +108,7 @@ Create a `.env` file in the project root:
 
 ```env
 NEWS_API_KEY=your_api_key_here
-NEWS_API_BASE_URL=https://newsapi.org/v2
+NEWS_API_BASE_URL=https://newsapi.org/
 ```
 
 ### 3. Install Dependencies
@@ -102,7 +126,6 @@ npm start
 # Or use specific platform commands
 npm run ios      # iOS Simulator
 npm run android  # Android Emulator
-npm run web      # Web Browser
 ```
 
 ### 5. Run on Device
